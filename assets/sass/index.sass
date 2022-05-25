@@ -1,0 +1,29 @@
+@import "__"
+@import url("../icon/icons.css")
+
+
+header
+    @include padrao
+    @include flex(center, space-between, row)
+
+    h2
+        color: #999
+        font-size: 2rem
+    div
+        @include flex(center, space-around, row, 10px)
+
+        img
+            float: left
+            width: 50px
+            height: 50px
+            object-fit: cover
+            border-radius: 50%
+
+        span
+            padding: 0 1rem
+            a
+                margin: 0 20px 0 0
+                i
+                    color: #333
+                    font-weight: 900
+                    font-size: 1.3rem
