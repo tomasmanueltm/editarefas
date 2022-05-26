@@ -31,3 +31,8 @@
   .bi-cart2::before { content: "\f243"; }
 .bi-cart3::before { content: "\f244"; }
 .bi-check-all::before { content: "\f269"; }
+.bi-layout-wtf::before { content: "\f659"; }
+.bi-backspace-reverse::before { content: "\f158"; }
+.bi-backspace::before { content: "\f159"; }
+.bi-backspace-fill::before { content: "\f156"; }
+.bi-backspace-reverse-fill::before { content: "\f157"; }

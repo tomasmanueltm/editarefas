@@ -91,3 +91,124 @@ header div span a i {
   font-weight: 900;
   font-size: 1.3rem;
 }
+
+section {
+  width: 100%;
+  padding: 2.3rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+section div h3 {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: Lato;
+  padding: 0 0 .4rem;
+}
+
+section div ul {
+  left: 3px;
+  width: 500px;
+  padding: 1rem 0 0;
+  position: relative;
+  border-left: 2px solid #ccc;
+}
+
+section div ul li {
+  display: block;
+  padding: 0 2rem;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+section div ul li::before {
+  top: 10px;
+  left: -5.5px;
+  padding: 5px;
+  content: " ";
+  display: block;
+  background: #999;
+  border-radius: 50%;
+  position: absolute;
+}
+
+section div ul li:nth-child(even)::before {
+  background: #333;
+}
+
+section div ul li h3 {
+  padding: .3rem 0;
+}
+
+section div ul li h3 a i {
+  cursor: pointer;
+  padding: 0 .5rem;
+  vertical-align: middle;
+}
+
+section div ul li a {
+  display: block;
+  color: #333;
+  padding: .5rem 0;
+  font-size: .8rem;
+}
+
+section div ul li:last-child {
+  margin: 0px 0px 0px;
+}
+
+section form {
+  width: 500px;
+  padding: 1rem;
+  background: #ccc;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+
+section form div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+
+section form div input, section form div textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: .5rem;
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 4px;
+}
+
+section form div textarea {
+  width: 465px;
+  height: 100px;
+  min-width: 465px;
+  max-width: 465px;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+section form div button {
+  width: 150px;
+  padding: .5rem;
+  cursor: pointer;
+}

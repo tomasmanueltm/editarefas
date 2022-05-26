@@ -27,3 +27,100 @@ header
                     color: #333
                     font-weight: 900
                     font-size: 1.3rem
+
+section
+
+    @include padrao
+    @include flex(baseline, space-between, row)
+
+    @include table
+        // @include padrao(100%)
+        padding: 1rem
+        @include flex(center, space-between, column, 2rem)
+
+    div
+        h3
+            color: #000
+            font-size: 1rem
+            font-weight: 900
+            font-family: Lato
+            padding: 0 0 .4rem
+
+        ul
+            left: 3px
+            width: 500px
+            padding: 1rem 0 0 
+            position: relative
+            border-left: 2px solid #ccc
+
+            li
+                display: block
+                padding: 0 2rem
+                margin: 0 0 1rem 
+                position: relative
+
+                &::before
+                    top: 10px
+                    left: -5.5px
+                    padding: 5px
+                    content: " "
+                    display: block
+                    background: #999
+                    border-radius: 50%
+                    position: absolute
+
+                &:nth-child(even)
+                     &::before
+                         background: #333
+                    
+
+                h3
+                    padding: .3rem 0
+                    a
+
+                        i
+                            cursor: pointer
+                            padding: 0 .5rem
+                            vertical-align: middle
+                a
+                    display: block
+                    color: #333
+                    padding: .5rem 0 
+                    font-size: .8rem
+
+                &:last-child
+                    margin: 0px 0px 0px
+
+    form
+        width: 500px
+        padding: 1rem
+        background: #ccc       
+        @include grid(1, 1rem)
+
+        div
+            width: 100%
+            @include grid(1, 1rem)
+
+            input, textarea
+                width: 100%
+                border: none
+                outline: none
+                padding: .5rem
+                max-width: 100%
+                min-width: 100%
+                border-radius: 4px
+
+            textarea
+                width: 465px
+                height: 100px
+                min-width: 465px
+                max-width: 465px
+                max-height: 100px
+                min-height: 100px
+
+            button
+                width: 150px
+                padding: .5rem
+                cursor: pointer
+
+

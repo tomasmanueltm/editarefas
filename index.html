@@ -21,24 +21,33 @@
         </div>
     </header>
 
-    <div class="painel">
-        <ul>
-            <li>
-                <h3>Tomas Manuel</h3>
-                <p>Estema é uma mensagem padrao para todos usuarios dos sistema</p>
-            </li>
-        </ul>
+    <section class="painel">
+        <div>
+            <h3>Tarefas</h3>
+            <ul>
+                <li>
+                    <h3>Tomas Manuel</h3>
+                    <span>Estema é uma mensagem padrao para todos usuarios dos sistema</span>
+                    <a href="#">eliminar</a>
+                </li>
+            </ul>
+        </div>
 
         <form action="">
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="">assunto</label>
+                <input type="text" v-model="assunto" placeholder="assunto">
             </div>
             <div>
-                <label for=""></label>
-                <textarea name="" id="" cols="30" rows="10"></textarea></div>
+                <label for="">Informação</label>
+                <textarea v-model="informacao" placeholder="aqui esta a minha mensagem"></textarea>
+            </div>
+            <div>
+                <button>Enviar</button>
+            </div>
         </form>
-    </div>
+
+    </section>
 
 
 
