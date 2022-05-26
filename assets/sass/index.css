@@ -54,12 +54,18 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  gap: 0px;
+  gap: 1rem;
 }
 
 header h2 {
   color: #999;
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  header h2 {
+    font-size: 1rem;
+  }
 }
 
 header div {
@@ -102,8 +108,19 @@ section {
   gap: 0px;
 }
 
+@media (max-width: 950px) {
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   section {
+    width: 100%;
+    padding: 100%;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -111,6 +128,10 @@ section {
     flex-direction: column;
     gap: 2rem;
   }
+}
+
+section div {
+  width: 100%;
 }
 
 section div h3 {
@@ -121,23 +142,45 @@ section div h3 {
   padding: 0 0 .4rem;
 }
 
-section div ul {
-  left: 3px;
+section div nav {
   width: 500px;
-  padding: 1rem 0 0;
+  max-height: 380px;
+  overflow-y: auto;
+  padding: .9rem .1rem;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 950px) {
+  section div nav {
+    width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  section div nav {
+    width: 100%;
+  }
+}
+
+section div nav ul {
+  top: 5px;
+  left: 2px;
+  width: 100%;
   position: relative;
   border-left: 2px solid #ccc;
 }
 
-section div ul li {
+section div nav ul li {
+  z-index: 2000;
   display: block;
   padding: 0 2rem;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
   position: relative;
 }
 
-section div ul li::before {
+section div nav ul li::before {
   top: 10px;
+  z-index: 2000;
   left: -5.5px;
   padding: 5px;
   content: " ";
@@ -147,28 +190,32 @@ section div ul li::before {
   position: absolute;
 }
 
-section div ul li:nth-child(even)::before {
+section div nav ul li:nth-child(even)::before {
+  z-index: 2000;
   background: #333;
 }
 
-section div ul li h3 {
+section div nav ul li h3 {
   padding: .3rem 0;
+  font-family: Linotte;
 }
 
-section div ul li h3 a i {
-  cursor: pointer;
-  padding: 0 .5rem;
-  vertical-align: middle;
-}
-
-section div ul li a {
-  display: block;
+section div nav ul li span {
   color: #333;
+  display: block;
+  font-family: Lato !important;
+}
+
+section div nav ul li a {
+  float: left;
+  clear: both;
+  color: #333;
+  display: block;
   padding: .5rem 0;
   font-size: .8rem;
 }
 
-section div ul li:last-child {
+section div nav ul li:last-child {
   margin: 0px 0px 0px;
 }
 
@@ -179,6 +226,18 @@ section form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
+}
+
+@media (max-width: 950px) {
+  section form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  section form {
+    width: 100%;
+  }
 }
 
 section form div {
@@ -195,7 +254,15 @@ section form div input, section form div textarea {
   padding: .5rem;
   max-width: 100%;
   min-width: 100%;
+  font-family: Lato;
   border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  section form div input, section form div textarea {
+    max-width: unset;
+    min-width: unset;
+  }
 }
 
 section form div textarea {
@@ -205,6 +272,14 @@ section form div textarea {
   max-width: 465px;
   max-height: 100px;
   min-height: 100px;
+}
+
+@media (max-width: 768px) {
+  section form div textarea {
+    width: 100%;
+    max-width: unset;
+    min-width: unset;
+  }
 }
 
 section form div button {
